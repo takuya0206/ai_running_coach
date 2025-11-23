@@ -36,3 +36,6 @@ AI Running Coach is a project that provides an AI assistant as a personal coach 
 2. **Chat with Coach**: Open the chat panel in your IDE. Add `data/activities.csv`, `coach-diary.md`, and any other relevant files to the chat context, then ask for advice. The AI will read `coach-instructions.md` and provide personalized feedback.
 
 3. **Record Coaching Session**: Use AI agent mode to update `coach-diary.md` with a summary of the session. If your IDE requires a separate session for agent mode, copy and paste the relevant chat history into the agent's context or update the diary manually.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
