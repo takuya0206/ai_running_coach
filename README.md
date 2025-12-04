@@ -33,7 +33,7 @@ AI Running Coach is a project that provides an AI assistant as a personal coach 
    ```
    *Note: This will launch a browser to log in to Garmin Connect. If it fails, try setting `HEADLESS=false` in `.env`.*
 
-2. **Chat with Coach**: Open the chat panel in your IDE. Add `data/activities.csv`, `coach-diary.md`, and any other relevant files to the chat context, then ask for advice. The AI will read `coach-instructions.md` and provide personalized feedback.
+2. **Chat with Coach**: Open the chat panel in your IDE. Add `data/activities.csv`, `coach-diary.md`, and any other relevant files such as `activity_most_recent_splits.csv` to the chat context, then ask for advice. The AI will read `coach-instructions.md` and provide personalized feedback.
 
 3. **Record Coaching Session**: Use AI agent mode to update `coach-diary.md` with a summary of the session. If your IDE requires a separate session for agent mode, copy and paste the relevant chat history into the agent's context or update the diary manually.
 

@@ -103,6 +103,9 @@ export class GarminClient {
         if (!this.page) throw new Error('Browser not initialized');
 
         console.log(`Starting download of splits for top ${count} activities...`);
+        // NOTE: Since the filename is fixed to 'activity_most_recent_splits.csv',
+        // if count > 1, the file will be overwritten by each subsequent download.
+        // Only the last downloaded activity's splits will be preserved.
         this.ensureDirectoryExists(outputDir);
 
         const activityIds = await this.getRecentActivityIds(count);
@@ -241,7 +244,8 @@ export class GarminClient {
         const downloadPromise = this.page!.waitForEvent('download');
         await element.click();
         const download = await downloadPromise;
-        const savePath = path.join(outputDir, `activity_${id}_splits.csv`);
+        // WARNING: Fixed filename means this will be overwritten if called multiple times
+        const savePath = path.join(outputDir, `activity_most_recent_splits.csv`);
         await download.saveAs(savePath);
         console.log(`Downloaded splits for activity ${id}`);
     }

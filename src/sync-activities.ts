@@ -22,7 +22,10 @@ async function main() {
         console.log(`Downloaded to ${downloadedFile}`);
 
         console.log('Downloading recent splits...');
-        const splitsDir = path.resolve(process.cwd(), 'data', 'splits');
+        const splitsDir = path.resolve(process.cwd(), 'data');
+        // NOTE: Since the filename is fixed to 'activity_most_recent_split.csv', 
+        // if count > 1, the file will be overwritten by each subsequent download.
+        // Only the last downloaded activity's splits will be preserved.
         await client.downloadRecentSplits(1, splitsDir);
 
         console.log('Merging activities...');
