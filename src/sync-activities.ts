@@ -21,6 +21,10 @@ async function main() {
 
         console.log(`Downloaded to ${downloadedFile}`);
 
+        console.log('Downloading recent splits...');
+        const splitsDir = path.resolve(process.cwd(), 'data', 'splits');
+        await client.downloadRecentSplits(1, splitsDir);
+
         console.log('Merging activities...');
         activityManager.mergeActivities(downloadedFile);
 

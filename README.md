@@ -1,7 +1,7 @@
 # AI Running Coach - Usage Guide
 AI Running Coach is a project that provides an AI assistant as a personal coach for Garmin users. It has the following two features:
 
-1. Download activity data from Garmin Connect
+1. Download activity data including the most recent splits from Garmin Connect
 2. Provide personal coaching to the user through an AI IDE
 
 <img src="doc/example.png" alt="example" width="960">
